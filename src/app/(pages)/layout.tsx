@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css"; 
- 
+import 'swiper/css';
+
 export const metadata: Metadata = {
   title: "Rainbow Theme",
   description: "Rainbow Theme for Next.js",
