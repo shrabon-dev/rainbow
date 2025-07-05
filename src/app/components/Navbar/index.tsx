@@ -14,10 +14,10 @@ export default function Navbar() {
     }
   return (
     <>
-        <nav className=''>
+        <nav className='px-3 sm:px-0'>
             <div className="container bg-transparent border-b-2 border-primary/20 pb-3 xl:pb-5 mx-auto ">
             <div className="flex justify-between items-center">
-                <div className="w-1/3 flex items-center gap-2">
+                <div className="w-1/2 sm:w-1/3 flex items-center gap-2">
                     <div className="info text-clr-text flex items-center gap-1">
                         <button onClick={handleMobileMenus} className="icon md:text-xs xl:text-lg px-2 cursor-pointer"><SlMenu/></button>
                         <button className="icon md:text-xs xl:text-lg px-2 border-l-2 border-clr-brdr/16 cursor-pointer"><MdOutlineLocalGroceryStore/></button>
@@ -37,7 +37,7 @@ export default function Navbar() {
                         </ul>
                     </div>
                 </div>
-                <div className="w-1/3">
+                <div className="w-1/2 sm:w-1/3">
                     <div className="text-end">
                         <Button text='Get a free quote'/>
                     </div>

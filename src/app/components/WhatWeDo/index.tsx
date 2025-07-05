@@ -18,11 +18,10 @@ export default function WhatWeDo() {
         </div>
         <div className="services_box relative z-10 mt-20">
           <span className="bg-gradient-to-r from-g2 -z-10 to-g1 block w-52 h-52 blur-3xl absolute right-20 -top-10"></span>
-          <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={1} />
-          <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={2} />
-          <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={3} />
-          <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={4} />
-
+            <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={1} />
+            <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={2} />
+            <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={3} />
+            <ServiceItem img={imgOne} title="One-to-one Consulting" desc="Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event." link="/" id={4} />
           {/* Button */}
           <div className="text-center pt-52">
             <Button text="View all services"/>

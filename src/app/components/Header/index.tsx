@@ -15,7 +15,7 @@ import { TfiWorld } from "react-icons/tfi";
 export default function Header() {
   return (
     <>
-        <header className='py-3 xl:py-5'>
+        <header className='px-3 sm:px-0 py-3 xl:py-5'>
             <div className="container bg-gradient-to-b from-blur via-white to-blur py-3 px-1 small-md:p-3 xl:p-5 rounded-lg mx-auto">
             <div className="flex justify-between items-center">
                 <div className="w-1/3 hidden md:flex items-center gap-2">
@@ -34,7 +34,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="w-1/3">
-                    <div className="socialIcon md:text-[10px] lg:text-xs xl:text-sm flex items-center justify-end gap-4">
+                    <div className="socialIcon text-[10px] lg:text-xs xl:text-sm flex items-center justify-end gap-4">
                         <button className='flex items-center gap-2 pr-4 cursor-pointer text-clr-text border-r-2 border-clr-brdr/16'><TfiWorld/> English <TfiAngleDown/></button>
                         <Link className='text-clr-text' href="/"> <FaFacebook/></Link>
                         <Link className='text-clr-text' href="/"> <FaLinkedinIn/></Link>

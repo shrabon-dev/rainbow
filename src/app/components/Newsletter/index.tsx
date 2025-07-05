@@ -21,14 +21,14 @@ export default function Newsletter() {
                                 {/* <img src="/images/newsletter.svg" alt="newsletter" className="w-10 h-10 mr-2" /> */}
                             </span>
                         </span>
-                        <h5 className='font-semiBold text-xl xl:text-3xl text-white leading-7'>keep up to date - <br /> get updates with latest topics</h5>
+                        <h5 className='font-semiBold text-sm sm:text-xl xl:text-3xl text-white leading-7'>keep up to date - <br /> get updates with latest topics</h5>
                     </div>
                 </div>
                 <div className="md:w-1/2 pt-5 md:pt-5">
                     <div className="form w-full">
                         <form action="get w-full">
                             <div className="grp w-full justify-between  bg-white/20 ml-auto rounded-lg border-2 font-extralight border-white/20 p-1 flex items-center gap-3">
-                                <input className=' text-base placeholder:!opacity-100 xl:w-80 placeholder:!text-white placeholder:!font-light placeholder:!font-inter text-white p-2 focus:outline-0' type="text" name="" id="" placeholder='Enter your email...'/>
+                                <input className=' text-base placeholder:!opacity-100 w-1/2 sm:w-80 xl:w-80 placeholder:!text-white placeholder:!font-light placeholder:!font-inter text-white p-2 focus:outline-0' type="text" name="" id="" placeholder='Enter your email...'/>
                                 <div className="w-fit block">
                                  <Button text='Subscribe'/>
                                 </div>

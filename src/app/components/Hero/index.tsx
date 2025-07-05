@@ -16,7 +16,7 @@ import { CiCirclePlus } from "react-icons/ci";
 export default function Hero() {
   return (
     <>
-      <section className="hero-section relative py-20 md:pb-10 2xl:pb-50 ">
+      <section className="hero-section relative py-20 md:pb-10 2xl:pb-50 px-3 sm:px-0">
         <Image className='absolute left-20 top-1/4' src={box} alt='shape'/>
         <div className="container mx-auto ">
           <div className="">

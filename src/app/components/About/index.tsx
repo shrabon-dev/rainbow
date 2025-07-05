@@ -12,7 +12,7 @@ import { TiArrowLeftOutline } from "react-icons/ti";
 export default function About() {
   return (
     <>
-      <section className='about_sect py-16'>
+      <section className='about_sect py-16 px-3 sm:px-0'>
         <div className="container mx-auto">
           <div className="md:flex">
             <div className="md:w-1/2 pr-10 pl-10 md:pl-0 lg:pr-20 xl:pr-0">
@@ -41,8 +41,10 @@ export default function About() {
                     <li className=" text-clr-text flex gap-4 xl:gap-8 items-center text-sm xl:text-lg font-normal pb-2 leading-7"><span className='inline-block w-2 h-2 rounded-full bg-gradient-to-l from-[#2f25c0] to-g1'></span> Majority have suffered alteration in some form</li>
                     <li className=" text-clr-text flex gap-4 xl:gap-8 items-center text-sm xl:text-lg font-normal pb-2 leading-7"><span className='inline-block w-2 h-2 rounded-full bg-gradient-to-l from-[#2f25c0] to-g1'></span> Contrary to popular belief is not simply random</li>
                   </ul>
-                  <div className="flex items-center gap-10 pt-10">
+                  <div className="flex flex-col-reverse sm:flex-row sm:items-center gap-10 pt-10">
+                    <span>
                       <Button text='More about us'/>
+                    </span>
                       <div className="ceo">
                         <div className="img flex items-center gap-5">
                           <div className="ceo_img shadow-lg shadow-g4/50 w-15  h-15 rounded-full overflow-hidden p-1 bg-gradient-to-b from-g1 to-g2/0">
