@@ -11,6 +11,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 export default function Feedback() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const clientImages = [
+    {img:fdbcImg,},
+    {img:fdbcImg,},
+    {img:fdbcImg,},
+    {img:fdbcImg,},
+    {img:fdbcImg,},
+    {img:fdbcImg,},
+    {img:fdbcImg,},
+    {img:fdbcImg,},
+  ]
   return (
     <>
       <section
@@ -49,6 +59,7 @@ export default function Feedback() {
           </div>
             <div className="client_img">
               <div className="flex items-center justify-center mb-8 gap-5">
+                {clientImages.map(item =>
                 <div className="img w-12 h-12 rounded-full overflow-hidden border-2 border-white">
                   <Image
                     className="w-full h-full block object-cover"
@@ -56,7 +67,8 @@ export default function Feedback() {
                     alt="fdbck"
                   />
                 </div>
-                <div className="img w-12 h-12 rounded-full overflow-hidden border-2 border-white">
+                )}
+                {/* <div className="img w-12 h-12 rounded-full overflow-hidden border-2 border-white">
                   <Image
                     className="w-full h-full block object-cover"
                     src={fdbcImg}
@@ -88,7 +100,7 @@ export default function Feedback() {
                     src={fdbcImg}
                     alt="fdbck"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 
