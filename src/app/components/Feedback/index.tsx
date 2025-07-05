@@ -87,7 +87,7 @@ export default function Feedback() {
                 {clientFeedbacks.map((item,index) => 
                 
                 Math.floor(clientFeedbacks.length/2) == index ?
-                <div className="center relative">
+                <div key={index}  className="center relative">
                   <span className="p-3 bg-g4 absolute -bottom-2 -left-2 text-white inline-block text-xl rounded-full">
                     <BiSolidQuoteAltLeft />
                   </span>
@@ -100,7 +100,7 @@ export default function Feedback() {
                   </div>
                 </div>
                 :
-                <div className="img w-8 md:w-12 h-8 md:h-12 rounded-full overflow-hidden border-2 border-white">
+                <div key={index}  className="img w-8 md:w-12 h-8 md:h-12 rounded-full overflow-hidden border-2 border-white">
                   <Image
                     className="w-full h-full block object-cover"
                     src={item.img}
