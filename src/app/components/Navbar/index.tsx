@@ -1,17 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import logo from '@/app/assets/images/logo.webp'
-import Image from 'next/image'
 import Link from 'next/link'
-import { IoLocationOutline } from "react-icons/io5";
-import { LuMessageSquareText } from "react-icons/lu";
-import { IoSearch } from "react-icons/io5";
-import { TfiAngleDown } from "react-icons/tfi";
-import { FaFacebook } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { TfiWorld } from "react-icons/tfi";
 import { SlMenu } from "react-icons/sl";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { BiSearchAlt } from "react-icons/bi";
