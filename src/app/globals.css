@@ -26,7 +26,7 @@
   .last_slide{
     @apply scale-70   relative -right-[0%] 2xl:-right-[0%] rotate-15 w-[500px] h-[500px]
   }
-  .second_active{
+  .works_showcase .swiper-slide.swiper-slide-prev {
     @apply   w-[480px] h-[480px] -ml-5 z-20
   }
   .third_active{
@@ -107,5 +107,29 @@
   }
 
   */
+  .works_showcase .swiper-wrapper {
+    display: flex !important;
+    align-items: end !important;
+  }
+  .works_showcase .swiper-slide.swiper-slide-prev {
+    width: 600px !important;
+    height: 600px !important;
+    z-index: 30;
+    margin-left: 200px;
+  }
+  .works_showcase .swiper-slide-active {
+    width: 480px !important;
+    height: 480px !important;
+    margin-left: -1.25rem !important; /* Tailwind's -ml-5 = -20px */
+    z-index: 20;
+  }
+  .works_showcase .swiper-slide.swiper-slide-next{
+    width: 380px !important;
+    height: 380px !important;
+    margin-left: -20px;
+    z-index: 10;
+    margin-right: 200px;
+
+  }
 
 }

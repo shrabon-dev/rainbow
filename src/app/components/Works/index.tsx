@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import titleIcon from '@/app/assets/images/Icon.png'
@@ -8,11 +9,12 @@ import WorkItem from '../utils/WorkItem'
 import imgOne from '@/app/assets/images/36.png'
 import imgTwo from '@/app/assets/images/business-people.png' 
 import imgThree from '@/app/assets/images/image1368.png' 
+import { Swiper, SwiperSlide } from 'swiper/react'
 export default function Works() {
   
   return (
     <>
-      <section id='works_showcase' className='py-20 overflow-hidden'>
+      <section id='works_showcase' className='py-20 works_showcase overflow-hidden'>
         <div className="container mx-auto py-20">
           <div className="flex">
             <div className="w-1/2">
@@ -38,11 +40,21 @@ export default function Works() {
           </div>
         </div>
         <div className="showcase_container flex justify-center items-end">
-          <WorkItem slideClass='first_last' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/>
+          <Swiper centeredSlides={true} slidesPerGroup={1} slidesPerView={3} loop className='items-end'>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+            <SwiperSlide><WorkItem slideClass='' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/></SwiperSlide>
+          </Swiper>
+          {/* <WorkItem slideClass='first_last' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/>
           <WorkItem slideClass='first_active' title='Business Consulting Service' date='2024, Business' img={imgTwo} link='/'/>
           <WorkItem slideClass='second_active' title='Business Consulting Service' date='2024, Business' img={imgThree} link='/'/>
           <WorkItem slideClass='third_active' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/>
-          <WorkItem slideClass='last_slide' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/>
+          <WorkItem slideClass='last_slide' title='Business Consulting Service' date='2024, Business' img={imgOne} link='/'/> */}
         </div>
       </section>
     </>
