@@ -10,13 +10,19 @@ import grArrow from "@/app/assets/images/gr_arrow.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 export default function Feedback() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const clientFeedbacks = [
     {
       img:fdbcImg,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
-      disg:'- UI / UX Designer',
+      disg:' UI / UX Designer',
+      star:4,
+    }, 
+    {
+      img:fdbcImg,
+      desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
+      name:'Bm Ashik',
+      disg:'UI / UX Designer',
       star:4,
     }, 
     {
@@ -30,21 +36,14 @@ export default function Feedback() {
       img:fdbcImg,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
-      disg:'- UI / UX Designer',
+      disg:'UI / UX Designer',
       star:4,
     }, 
     {
       img:fdbcImg,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
-      disg:'- UI / UX Designer',
-      star:4,
-    }, 
-    {
-      img:fdbcImg,
-      desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
-      name:'Bm Ashik',
-      disg:'- UI / UX Designer',
+      disg:' UI / UX Designer',
       star:4,
     }, 
   ]
@@ -147,8 +146,7 @@ export default function Feedback() {
 
             <Swiper
               spaceBetween={0}
-              slidesPerView={1}
-              thumbs={{ swiper: thumbsSwiper }}
+              slidesPerView={1} 
               speed={1000}
               loop={true}
               modules={[Thumbs, Navigation]}
@@ -157,15 +155,13 @@ export default function Feedback() {
               onSwiper={(swiper) => console.log(swiper)}
             >
               {clientFeedbacks.map((item,index)=>
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <div className="info max-w-[740px] mx-auto text-center">
                   <p className="font-normal text-sm md:text-2xl text-clr-text md:leading-10">
-                    “Simply dummy text of the printing and Expert Advisor. lorem
-                    Ipsum has been the standard dummy text ever since the when
-                    an unknown printer took a galley of type and scrambled.”
+                   {item.desc}
                   </p>
                   <h6 className="font-normal text-base md:text-lg pt-8 pb-3 text-clr-text  ">
-                    <span className="text-clr">Bm Ashik</span> - UI/UX Designer
+                    <span className="text-clr">{item.name}</span> - {item.disg}
                   </h6>
                   <div className="star flex justify-center items-center text-amber-300">
                     <IoStar />
