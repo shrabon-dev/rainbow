@@ -114,7 +114,7 @@ export default function Feedback() {
               <Swiper   
                 onSwiper={setThumbs} // ← this sets the thumbs swiper instance
                 slidesPerView={5}
-                spaceBetween={0}
+                spaceBetween={10}
                 centeredSlides={true}
                 onSlideChange={(swiper) => setCenterSlide(swiper.realIndex)}
                 loop
@@ -127,11 +127,11 @@ export default function Feedback() {
 
                   centerSlide == index ?
                       <SwiperSlide   className="flex items-center justify-center" key={index} >
-                        <div key={index}  className="center clientImg relative -top-1/2">
-                          <span className="p-3 qoute bg-g4   absolute bottom-0 left-0 text-white   text-xl rounded-full">
+                        <div key={index}  className="center clientImg relative -left-4  -top-1/2">
+                          <span className="p-1 md:p-3 qoute bg-g4   absolute bottom-0 left-0 text-white text-sm md:text-xl rounded-full">
                             <BiSolidQuoteAltLeft />
                           </span>
-                          <div className="img w-24  h-24 rounded-full overflow-hidden border-2 border-white">
+                          <div className="img w-16 md:w-24 h-16 md:h-24 rounded-full overflow-hidden border-2 border-white">
                             <Image
                               className="w-full h-full object-top block object-cover"
                               src={item.img}
@@ -144,7 +144,7 @@ export default function Feedback() {
        
                       <SwiperSlide  className="flex items-center justify-center"  key={index} >
                  
-                          <div  key={index}  className="img w-10 h-10 rounded-full overflow-hidden border-2  border-white">
+                          <div  key={index}  className="img w-6 md:w-10 h-6 md:h-10 rounded-full overflow-hidden border-2  border-white">
                             <Image
                               className="w-full h-full object-top block object-cover"
                               src={item.img}
