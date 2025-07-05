@@ -5,7 +5,7 @@ export default function CompanySummery() {
     <>
       <div className="CompanySummery">
         <div className="container mx-auto py-20">
-        <div className="flex">
+        <div className="flex flex-wrap justify-center ">
          <Summery title="Business Strategy" percentage={99}/>
          <Summery title="Targeted Acquisition" percentage={82}/>
          <Summery title="Complete Projects" amount={62000}/>

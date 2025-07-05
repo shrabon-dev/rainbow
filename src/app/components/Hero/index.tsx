@@ -16,16 +16,15 @@ import { CiCirclePlus } from "react-icons/ci";
 export default function Hero() {
   return (
     <>
-      <section className="hero-section relative py-20 pb-50 ">
+      <section className="hero-section relative py-20 md:pb-10 2xl:pb-50 ">
         <Image className='absolute left-20 top-1/4' src={box} alt='shape'/>
         <div className="container mx-auto ">
           <div className="">
             <div className="w-full">
-                     <div className="flex items-center justify-between">
-                          <div className="w-2/3 ">
-                            <h1 className='font-bold text-[100px] leading-tight'><span className='relative'>We shape  the future <span className='absolute -right-5 -top-5'><Image src={tr} alt='shape'/></span>  </span><span className='relative'>of <GradientColor text='business' fontSize='[100px]' fontWeight='semibold'/> <span className='absolute -right-20 top-5'><Image src={rckt} alt='shape'/></span> </span></h1>
-                            <p className='text-clr-text font-normal text-sm mt-4 max-w-1/2 leading-7'>A business consultant is a professional who provides expert advice and guidance to businesses on various aspects such.</p>
-
+                     <div className="small-md:flex items-center justify-between">
+                          <div className="w-full small-md:w-1/2 2xl:w-2/3 ">
+                            <h1 className='font-bold text-2xl sm:text-4xl lg:text-6xl xl:text-[100px] leading-tight'><span className='relative'>We shape  the future <span className='absolute -right-5 -top-5'><Image src={tr} alt='shape'/></span>  </span><span className='relative block xl:inline-block'>of <span className='text-[60px] sm:text-6xl xl:text-[100px] relative inline-block'><GradientColor text='business' fontWeight='semibold'/>  <span className='absolute -right-20 2xl:top-5'><Image src={rckt} alt='shape'/></span></span>  </span></h1>
+                            <p className='text-clr-text font-normal text-sm mt-4 lg:max-w-1/2 leading-7'>A business consultant is a professional who provides expert advice and guidance to businesses on various aspects such.</p>
                           </div>
                           {/* <div className="w-1/2 flex justify-end">
                             <img src="/images/hero_image.png" alt="Hero Image" className='w-64 h-auto'/>
@@ -65,8 +64,8 @@ export default function Hero() {
                           </span>
                         </div>
             </div>
-            <div className="w-full">
-                <div className="hr_img absolute -bottom-20 right-0 -z-10 w-fit h-fit">
+            <div className="hidden md:block w-full">
+                <div className="hr_img md:absolute -bottom-20 right-0 -z-10 md:w-[60%] xl:w-[70%] 2xl:w-[1120px] h-fit">
                   <div className="text_circle absolute -top-20 left-[55%] -translate-x-1/2 w-fit h-fit">
                       <Image src={crcl_txt} alt='hero image' className='w-44 h-44' />
                   </div>

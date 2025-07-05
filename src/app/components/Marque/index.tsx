@@ -6,8 +6,8 @@ export default function Marquee() {
   return (
     <>
     <div className="mb-20 relative">
-        <div className="marquee z-10 bg-gradient-to-r from-g1 to-g2 text-white p-5  shadow-lg">
-            <div className="marquee-content text-6xl font-bold uppercase stroke_text inline-flex items-center justify-center gap-4">
+        <div className="marquee z-10 bg-gradient-to-r from-g1 to-g2 text-white p-3 md:p-5  shadow-lg">
+            <div className="marquee-content text-4xl md:text-6xl font-bold uppercase stroke_text inline-flex items-center justify-center gap-4">
             <Image src={un} alt='un' className='w-10 inline-block'/>
             <span>Creative    </span>
             <Image src={un} alt='un' className='w-10 inline-block'/>

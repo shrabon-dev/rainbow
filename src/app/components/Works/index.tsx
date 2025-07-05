@@ -16,9 +16,11 @@ export default function Works() {
         <div className="container mx-auto py-20">
           <div className="flex">
             <div className="w-1/2">
-              <div className="title">
+              <div className="title flex items-center gap-1">
                 <Image src={titleIcon} alt='icon'/>
+                <span className='text-base'>
                 <GradientColor text='Work showcase'/>
+                </span>
               </div>
             </div>
             <div className="w-1/2">

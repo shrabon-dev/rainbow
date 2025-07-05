@@ -16,10 +16,10 @@ export default function Footer() {
       <div className="avt absolute bottom-0 right-0 z-10  -translate-x-1/2">
         <Image src={footer_avatar} alt="avatar" className='w-32 blur-sm'/>
       </div>
-      <div className="bg-dark pt-24 relative z-0">
+      <div className="bg-dark pt-5 md:pt-24 relative z-0">
       <div className="container mx-auto">
-        <div className="flex flex-wrap justify-between items-start">
-          <div className="w-1/3 p-5">     
+        <div className="md:flex flex-wrap justify-between items-start">
+          <div className="lg:w-1/3 p-5">     
             <div className="compny bg-card p-10 rounded-lg shadow-lg">
               <div className="logo">
                 <Image src={flogo} alt='footer logo'/>
@@ -37,53 +37,53 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="w-2/3 p-5">
+          <div className="w-full lg:w-2/3 p-5">
               <div className="fmenus bg-card p-10 rounded-lg shadow-lg">
-                  <div className="flex flex-wrap justify-between items-start">
-                    <div className="w-1/3">
-                      <h4 className='font-semibold text-2xl text-white'>Quick Links</h4>
-                      <ul className='space-y-3 pt-8'>
-                        <li><Link className='font-normal text-base text-white/90' href="/">About Company</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Strategy</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Investor Presentation</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Investor Career</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Meet Our Team </Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Get in Touch</Link></li>
+                  <div className="sm:flex flex-wrap justify-between items-start">
+                    <div className="mb-6 md:mb-0 sm:w-1/2 md:w-1/3 lg:w-1/3">
+                      <h4 className='font-semibold text-lg md:text-2xl text-white'>Quick Links</h4>
+                      <ul className='space-y-1 md:space-y-3 pt-2 md:pt-8'>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">About Company</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Strategy</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Investor Presentation</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Investor Career</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Meet Our Team </Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Get in Touch</Link></li>
                       </ul>
                     </div>
-                    <div className="w-1/3">
-                      <h4 className='font-semibold text-2xl text-white'>Our Services</h4>
-                      <ul className='space-y-3 pt-8'>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Business Consulting</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Finance Strategy</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Investor Presentation</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Investor Career</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Marketing Analysis</Link></li>
-                        <li><Link className='font-normal text-base text-white/90' href="/">Tax Preparation</Link></li>
+                    <div className="mb-6 md:mb-0 sm:w-1/2 md:w-1/3 lg:w-1/3">
+                      <h4 className='font-semibold  text-lg md:text-2xl text-white'>Our Services</h4>
+                      <ul className='space-y-1 sm:space-y-3 pt-2 md:pt-8'>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Business Consulting</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Finance Strategy</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Investor Presentation</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Investor Career</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Marketing Analysis</Link></li>
+                        <li><Link className='font-normal text-xs md:text-base text-white/90' href="/">Tax Preparation</Link></li>
                       </ul>
                     </div>
-                    <div className="w-1/3">
-                      <h4 className='font-semibold text-2xl text-white'>Upcoming Event</h4>
-                      <ul className='space-y-3 pt-8'>
-                        <li className='flex items-center gap-3 pb-4'>
+                    <div className="mb-6 md:mb-0 sm:w-full md:w-1/3 lg:w-1/3 sm:pt-10 md:pt-0">
+                      <h4 className='font-semibold  text-lg md:text-2xl text-white'>Upcoming Event</h4>
+                      <ul className='space-y-3 pt-2 md:pt-8'>
+                        <li className='flex items-center gap-3 pb-1 md:pb-4'>
                           <span className='img w-12 h-12 border-2 rounded-full overflow-hidden'><Image src={event} alt='event image'/></span>
                           <span>
-                              <Link className='font-medium block text-base text-white/90' href="/">Business Consulting</Link>
-                              <Link className='font-extralight block text-base text-white/90' href="/">26 March, USA</Link>
+                              <Link className='font-medium block text-xs md:text-base text-white/90' href="/">Business Consulting</Link>
+                              <Link className='font-extralight block text-xs md:text-base text-white/90' href="/">26 March, USA</Link>
                           </span>
                         </li>
-                        <li className='flex items-center gap-3  pb-4'>
+                        <li className='flex items-center gap-3  pb-1 md:pb-4'>
                           <span className='img w-12 h-12 border-2 rounded-full overflow-hidden'><Image src={event} alt='event image'/></span>
                           <span>
-                              <Link className='font-medium block text-base text-white/90' href="/">Email Marketing</Link>
-                              <Link className='font-extralight block text-base text-white/90' href="/">26 March, USA</Link>
+                              <Link className='font-medium block text-xs md:text-base text-white/90' href="/">Email Marketing</Link>
+                              <Link className='font-extralight block text-xs md:text-base text-white/90' href="/">26 March, USA</Link>
                           </span>
                         </li>
-                        <li className='flex items-center gap-3  pb-4'>
+                        <li className='flex items-center gap-3 pb-1 md:pb-4'>
                           <span className='img w-12 h-12 border-2 rounded-full overflow-hidden'><Image src={event} alt='event image'/></span>
                           <span>
-                              <Link className='font-medium block text-base text-white/90' href="/">Cultures of Creativity</Link>
-                              <Link className='font-extralight block text-base text-white/90' href="/">26 March, USA</Link>
+                              <Link className='font-medium block text-xs md:text-base text-white/90' href="/">Cultures of Creativity</Link>
+                              <Link className='font-extralight block text-xs md:text-base text-white/90' href="/">26 March, USA</Link>
                           </span>
                         </li>
                       </ul>
@@ -91,15 +91,15 @@ export default function Footer() {
                   </div>
               </div>
           </div>
-          <div className="w-full">
+          <div className="w-full p-5 md:p-0">
            <Newsletter/>
           </div>
         </div>
-        <div className="flex justify-between items-center py-16">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row justify-center gap-5 md:justify-between items-center py-5 md:py-16">
+          <div className="md:w-1/2">
             <p className='font-normal text-base text-white '> © 2024 <GradientColor text='Rainbow Themes'/>. All Rights Reserved.</p>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
           <ul className='flex justify-end items-center gap-5'>
             <li><Link className='font-extralight text-base text-white' href={'/'}>Terms & Condition</Link></li>
             <li><Link className='font-extralight text-base text-white flex items-center gap-2' href={'/'}><span className='w-1 h-1 rounded-full bg-white/20 inline-block'></span> Privecy Policy</Link></li>
