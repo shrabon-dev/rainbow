@@ -93,6 +93,17 @@
     border-width: 4px;
     border-style: dashed;
   }
+  .qoute{
+    display: none;
+  }
+  .clientImg .swiper-slide-active{
+    width: 300px;
+    height: 300px;
+  }
+
+  #feedback_sect > .swiper-slide.swiper-slide-active > .qoute{
+    display: inline-block;
+  }
 
  
 

@@ -1,15 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { IoStar } from "react-icons/io5";
 import { IoMdStarHalf } from "react-icons/io";
 import Image from "next/image";
 import fdbcImg from "@/app/assets/images/ceo.png";
+import fdbcImgTwo from "@/app/assets/images/steptodown 21.png";
+import fdbcImgThree from "@/app/assets/images/abtOne.png";
+import fdbcImgFour from "@/app/assets/images/fdb3.png";
+import fdbcImgFive from "@/app/assets/images/fdb4.png";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import whiteArrow from "@/app/assets/images/white_arrow.png";
 import grArrow from "@/app/assets/images/gr_arrow.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 export default function Feedback() {
+    const [thumbs, setThumbs] = useState(null);
   const clientFeedbacks = [
     {
       img:fdbcImg,
@@ -19,28 +24,35 @@ export default function Feedback() {
       star:4,
     }, 
     {
-      img:fdbcImg,
+      img:fdbcImgTwo,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:'UI / UX Designer',
       star:4,
     }, 
     {
-      img:fdbcImg,
+      img:fdbcImgThree,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:'- UI / UX Designer',
       star:4,
     }, 
     {
-      img:fdbcImg,
+      img:fdbcImgFour,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:'UI / UX Designer',
       star:4,
     }, 
     {
-      img:fdbcImg,
+      img:fdbcImgFive,
+      desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
+      name:'Bm Ashik',
+      disg:' UI / UX Designer',
+      star:4,
+    }, 
+    {
+      img:fdbcImgFive,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:' UI / UX Designer',
@@ -82,99 +94,92 @@ export default function Feedback() {
               />
             </button>
           </div>
-            <div className="client_img">
-              <div className="flex items-center justify-center mb-8 gap-5">
-                {clientFeedbacks.map((item,index) => 
-                
-                Math.floor(clientFeedbacks.length/2) == index ?
-                <div key={index}  className="center relative">
-                  <span className="p-3 bg-g4 absolute -bottom-2 -left-2 text-white inline-block text-xl rounded-full">
-                    <BiSolidQuoteAltLeft />
-                  </span>
-                  <div className="img w-24 h-24 rounded-full overflow-hidden border-2 border-white">
-                    <Image
-                      className="w-full h-full block object-cover"
-                      src={fdbcImg}
-                      alt="fdbck"
-                    />
-                  </div>
-                </div>
-                :
-                <div key={index}  className="img w-8 md:w-12 h-8 md:h-12 rounded-full overflow-hidden border-2 border-white">
-                  <Image
-                    className="w-full h-full block object-cover"
-                    src={item.img}
-                    alt="fdbck"
-                  />
-                </div>
-                )}
-                {/* <div className="img w-12 h-12 rounded-full overflow-hidden border-2 border-white">
-                  <Image
-                    className="w-full h-full block object-cover"
-                    src={fdbcImg}
-                    alt="fdbck"
-                  />
-                </div>
-                <div className="center relative">
-                  <span className="p-3 bg-g4 absolute -bottom-2 -left-2 text-white inline-block text-xl rounded-full">
-                    <BiSolidQuoteAltLeft />
-                  </span>
-                  <div className="img w-24 h-24 rounded-full overflow-hidden border-2 border-white">
-                    <Image
-                      className="w-full h-full block object-cover"
-                      src={fdbcImg}
-                      alt="fdbck"
-                    />
-                  </div>
-                </div>
-                <div className="img w-12 h-12 rounded-full overflow-hidden border-2 border-white">
-                  <Image
-                    className="w-full h-full block object-cover"
-                    src={fdbcImg}
-                    alt="fdbck"
-                  />
-                </div>
-                <div className="img w-12 h-12 rounded-full overflow-hidden border-2 border-white">
-                  <Image
-                    className="w-full h-full block object-cover"
-                    src={fdbcImg}
-                    alt="fdbck"
-                  />
-                </div> */}
-              </div>
+          <div className="client_img">
+            <div className=" mb-5">
+              <Swiper     modules={[Thumbs]}
+              navigation={{ nextEl: ".next", prevEl: ".prev" }}
+              thumbs={{ swiper: thumbs }}
+              modules={[Navigation, Thumbs]}
+              slidesPerView={5} 
+              slidesPerGroup={1} 
+              centeredSlides={true}
+              loop
+              speed={600} >
+                  {clientFeedbacks.map((item,index) => 
+                      // Math.floor(clientFeedbacks.length/2) == index ?
+                      // <SwiperSlide  key={index} >
+                      // <div key={index}  className="center relative">
+                      //   <span className="p-3 bg-g4 absolute -bottom-2 -left-2 text-white inline-block text-xl rounded-full">
+                      //     <BiSolidQuoteAltLeft />
+                      //   </span>
+                      //   <div className="img w-24 h-24 rounded-full overflow-hidden border-2 border-white">
+                      //     <Image
+                      //       className="w-full h-full object-top block object-cover"
+                      //       src={item.img}
+                      //       alt="fdbck"
+                      //     />
+                      //   </div>
+                      // </div>
+                      // </SwiperSlide>
+                      // :
+                      // <SwiperSlide  key={index} >
+                      // <div key={index}  className="img w-8 md:w-12 h-8 md:h-12 rounded-full overflow-hidden border-2 border-white">
+                      //   <Image
+                      //     className="w-full h-full block object-cover"
+                      //     src={item.img}
+                      //     alt="fdbck"
+                      //   />
+                      // </div>
+                      // </SwiperSlide>
+                      <SwiperSlide  key={index} >
+                        <div key={index}  className="center clientImg relative">
+                          <span className="p-3 qoute bg-g4   absolute -bottom-2 -left-2 text-white swiper-slide-active:inline-block text-xl rounded-full">
+                            <BiSolidQuoteAltLeft />
+                          </span>
+                          <div className="img w-24 h-24 rounded-full overflow-hidden border-2 border-white">
+                            <Image
+                              className="w-full h-full object-top block object-cover"
+                              src={item.img}
+                              alt="fdbck"
+                            />
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                  )}
+            
+              </Swiper>
+    
             </div>
-
-            <Swiper
-              spaceBetween={0}
-              slidesPerView={1} 
-              speed={1000}
-              loop={true}
-              modules={[Thumbs, Navigation]}
-              navigation={{ nextEl: ".prev", prevEl: ".next" }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
-            >
-              {clientFeedbacks.map((item,index)=>
-              <SwiperSlide key={index}>
-                <div className="info max-w-[740px] mx-auto text-center">
-                  <p className="font-normal text-sm md:text-2xl text-clr-text md:leading-10">
-                   {item.desc}
-                  </p>
-                  <h6 className="font-normal text-base md:text-lg pt-8 pb-3 text-clr-text  ">
-                    <span className="text-clr">{item.name}</span> - {item.disg}
-                  </h6>
-                  <div className="star flex justify-center items-center text-amber-300">
-                    <IoStar />
-                    <IoStar />
-                    <IoStar />
-                    <IoStar />
-                    <IoMdStarHalf />
-                  </div>
+          </div>
+          <Swiper 
+          modules={[Navigation, Thumbs]}
+          slidesPerView={1}
+          loop 
+          navigation={{ nextEl: ".next", prevEl: ".prev" }}   // ← correct order
+          watchSlidesProgress      // lets Swiper add is-visible classes
+          className="mb-6 select-none"
+          >
+            {clientFeedbacks.map((item,index)=>
+            <SwiperSlide key={index}>
+              <div className="info max-w-[740px] mx-auto text-center">
+                <p className="font-normal text-sm md:text-2xl text-clr-text md:leading-10">
+                  {item.desc}
+                </p>
+                <h6 className="font-normal text-base md:text-lg pt-8 pb-3 text-clr-text  ">
+                  <span className="text-clr">{item.name}</span> - {item.disg}
+                </h6>
+                <div className="star flex justify-center items-center text-amber-300">
+                  <IoStar />
+                  <IoStar />
+                  <IoStar />
+                  <IoStar />
+                  <IoMdStarHalf />
                 </div>
-              </SwiperSlide>
-              )}
-        
-            </Swiper>
+              </div>
+            </SwiperSlide>
+            )}
+      
+          </Swiper>
           </div>
         </div>
       </section>
