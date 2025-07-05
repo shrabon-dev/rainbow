@@ -15,6 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 export default function Feedback() {
     const [thumbs, setThumbs] = useState(null);
+    const [centerSlide, setCenterSlide] = useState(null);
   const clientFeedbacks = [
     {
       img:fdbcImg,
@@ -42,6 +43,20 @@ export default function Feedback() {
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:'UI / UX Designer',
+      star:4,
+    }, 
+    {
+      img:fdbcImgFive,
+      desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
+      name:'Bm Ashik',
+      disg:' UI / UX Designer',
+      star:4,
+    }, 
+    {
+      img:fdbcImgFive,
+      desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
+      name:'Bm Ashik',
+      disg:' UI / UX Designer',
       star:4,
     }, 
     {
@@ -95,48 +110,28 @@ export default function Feedback() {
             </button>
           </div>
           <div className="client_img">
-            <div className=" mb-5">
-              <Swiper     modules={[Thumbs]}
-              navigation={{ nextEl: ".next", prevEl: ".prev" }}
-              thumbs={{ swiper: thumbs }}
-              modules={[Navigation, Thumbs]}
-              slidesPerView={5} 
-              slidesPerGroup={1} 
-              centeredSlides={true}
-              loop
-              speed={600} >
+            <div className="  mb-5">
+              <Swiper   
+                onSwiper={setThumbs} // ← this sets the thumbs swiper instance
+                slidesPerView={5}
+                spaceBetween={0}
+                centeredSlides={true}
+                onSlideChange={(swiper) => setCenterSlide(swiper.realIndex)}
+                loop
+                modules={[Navigation, Thumbs]}
+                navigation={{ nextEl: ".next", prevEl: ".prev" }}
+                speed={600}
+                watchSlidesProgress 
+                className="mb-5" >
                   {clientFeedbacks.map((item,index) => 
-                      // Math.floor(clientFeedbacks.length/2) == index ?
-                      // <SwiperSlide  key={index} >
-                      // <div key={index}  className="center relative">
-                      //   <span className="p-3 bg-g4 absolute -bottom-2 -left-2 text-white inline-block text-xl rounded-full">
-                      //     <BiSolidQuoteAltLeft />
-                      //   </span>
-                      //   <div className="img w-24 h-24 rounded-full overflow-hidden border-2 border-white">
-                      //     <Image
-                      //       className="w-full h-full object-top block object-cover"
-                      //       src={item.img}
-                      //       alt="fdbck"
-                      //     />
-                      //   </div>
-                      // </div>
-                      // </SwiperSlide>
-                      // :
-                      // <SwiperSlide  key={index} >
-                      // <div key={index}  className="img w-8 md:w-12 h-8 md:h-12 rounded-full overflow-hidden border-2 border-white">
-                      //   <Image
-                      //     className="w-full h-full block object-cover"
-                      //     src={item.img}
-                      //     alt="fdbck"
-                      //   />
-                      // </div>
-                      // </SwiperSlide>
-                      <SwiperSlide  key={index} >
-                        <div key={index}  className="center clientImg relative">
-                          <span className="p-3 qoute bg-g4   absolute -bottom-2 -left-2 text-white swiper-slide-active:inline-block text-xl rounded-full">
+
+                  centerSlide == index ?
+                      <SwiperSlide   className="flex items-center justify-center" key={index} >
+                        <div key={index}  className="center clientImg relative -top-1/2">
+                          <span className="p-3 qoute bg-g4   absolute bottom-0 left-0 text-white   text-xl rounded-full">
                             <BiSolidQuoteAltLeft />
                           </span>
-                          <div className="img w-24 h-24 rounded-full overflow-hidden border-2 border-white">
+                          <div className="img w-24  h-24 rounded-full overflow-hidden border-2 border-white">
                             <Image
                               className="w-full h-full object-top block object-cover"
                               src={item.img}
@@ -144,6 +139,18 @@ export default function Feedback() {
                             />
                           </div>
                         </div>
+                      </SwiperSlide>
+                  :
+       
+                      <SwiperSlide  className="flex items-center justify-center"  key={index} >
+                 
+                          <div  key={index}  className="img w-10 h-10 rounded-full overflow-hidden border-2  border-white">
+                            <Image
+                              className="w-full h-full object-top block object-cover"
+                              src={item.img}
+                              alt="fdbck"
+                            />
+                          </div>
                       </SwiperSlide>
                   )}
             
@@ -153,10 +160,10 @@ export default function Feedback() {
           </div>
           <Swiper 
           modules={[Navigation, Thumbs]}
+          navigation={{ nextEl: ".next", prevEl: ".prev" }}
+          thumbs={{ swiper: thumbs }} // ← connect this to the top swiper
           slidesPerView={1}
-          loop 
-          navigation={{ nextEl: ".next", prevEl: ".prev" }}   // ← correct order
-          watchSlidesProgress      // lets Swiper add is-visible classes
+          loop
           className="mb-6 select-none"
           >
             {clientFeedbacks.map((item,index)=>
