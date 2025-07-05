@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IoLocationOutline } from "react-icons/io5";
 import { LuMessageSquareText } from "react-icons/lu";
-import { IoSearch } from "react-icons/io5";
 import { TfiAngleDown } from "react-icons/tfi";
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";

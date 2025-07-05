@@ -1,11 +1,14 @@
 'use client'
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { ReactNode, useState } from "react";
+import { useEffect, useState } from "react";
 import GradientColor from "./GradientColor";
 
 export default function ServiceItem({title,desc,link,img,id,}:{title?:string,desc?:string,link?:string,img?:StaticImageData,id?:number,}) {
     const [currentSlide,setCurrentSlide] = useState(1);
+    useEffect(()=>{
+        setCurrentSlide(currentSlide)
+    },[])
   return (
     <div className={`max-w-[960px] mx-auto shadow-2xl rounded-xl bg-white p-10 ${currentSlide == id ? 'relative z-50':`absolute left-1/2 -translate-x-1/2`} ${id == 1 && 'top-[150px] z-50'} ${id == 2 && 'top-[70px] scale-90 z-40  blur-[2px]'} ${id == 3 && 'top-[-0px] scale-80 z-30  blur-[2px]'} ${id == 4 && 'top-[-70px] z-20 scale-70 blur-[2px]'}`}>
         <div className="flex">

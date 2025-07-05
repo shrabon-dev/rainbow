@@ -1,6 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { ReactNode } from "react";
+import { StaticImageData } from "next/image";
+import Link from "next/link"; 
 import { GoArrowUpRight } from "react-icons/go";
 
 export default function WorkItem({img,date,title,link,slideClass}:{img?:StaticImageData,date?:string,title?:string,link?:string,slideClass?:string}) {

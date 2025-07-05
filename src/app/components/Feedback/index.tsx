@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { IoStar } from "react-icons/io5";
 import { IoMdStarHalf } from "react-icons/io";
 import Image from "next/image";
