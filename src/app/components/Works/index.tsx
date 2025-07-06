@@ -9,7 +9,7 @@ import WorkItem from '../utils/WorkItem'
 import imgOne from '@/app/assets/images/36.png'
 import imgTwo from '@/app/assets/images/business-people.png' 
 import imgThree from '@/app/assets/images/image1368.png' 
-
+import { motion } from 'motion/react'
 export default function Works() {
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 5; // how many items to show
@@ -44,20 +44,29 @@ export default function Works() {
 
   return (
     <>
-      <section id='works_showcase' className='py-20 works_showcase overflow-hidden'>
+      <section id='works_showcase' className='py-20 works_showcase overflow-hidden '>
         <div className="container mx-auto py-20">
           <div className="flex">
             <div className="w-1/2">
-              <div className="title flex items-center gap-1">
+              <motion.div   initial={{ y: 60, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut",delay:0 }}
+                  viewport={{ once: true, amount: 0.4 }} className="title flex items-center gap-1">
                 <Image src={titleIcon} alt='icon'/>
                 <span className='text-sm md:text-base'>
                 <GradientColor text='Work showcase'/>
                 </span>
-              </div>
+              </motion.div>
             </div>
             <div className="w-1/2">
-              <p className='font-normal text-sm md:text-base text-clr-text w-full md:max-w-1/2 ml-auto text-end'>Ready to transform your hard work into a thriving, stress-free business?</p>
-              <div className="slide_btn w-24 ml-auto mt-10 relative">
+              <motion.p  initial={{ y: 60, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut",delay:0 }}
+                  viewport={{ once: true, amount: 0.4 }}  className='font-normal text-sm md:text-base text-clr-text w-full md:max-w-1/2 ml-auto text-end'>Ready to transform your hard work into a thriving, stress-free business?</motion.p>
+              <motion.div   initial={{ y: 60, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut",delay:.1 }}
+                  viewport={{ once: true, amount: 0.4 }} className="slide_btn w-24 ml-auto mt-10 relative">
               <button onClick={handlePrev} className="absolute next cursor-pointer duration-300 ease-linear transition-all hover:from-g2 hover:to-g1 left-0 -translate-y-1/2 top-1/2  w-10 h-10 border-2 border-primary/20  inline-flex items-center justify-center bg-gradient-to-br hover:border-white from-g2/0 to-g1/0 rounded-full group">
               <Image className='hidden -rotate-180 group-hover:block' src={whiteArrow} alt='prev btn arrow'/> 
               <Image className='inline-block   group-hover:hidden' src={grArrow} alt='prev btn arrow'/></button>
@@ -65,12 +74,14 @@ export default function Works() {
                 <Image className='hidden group-hover:block' src={whiteArrow} alt='next btn arrow'/> 
                 <Image className=' rotate-180 group-hover:hidden' src={grArrow} alt='next btn arrow'/> 
               </button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
-       
-        <div className="showcase_container flex justify-center items-end">
+        <motion.div   initial={{ y: 60, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut",delay:.3 }}
+                  viewport={{ once: true, amount: 0.4 }} className="showcase_container flex justify-center items-end">
         {visibleSlides.map((item) => (
             <WorkItem
               key={item.id}
@@ -82,7 +93,7 @@ export default function Works() {
             />
           ))}
       
-        </div>
+        </motion.div>
       </section>
     </>
   )

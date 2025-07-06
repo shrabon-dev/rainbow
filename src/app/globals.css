@@ -61,6 +61,9 @@
 }
  
 @layer base{
+  html,body{
+    overflow-x: hidden;
+  }
   .btn_shadow{
     box-shadow: inset 0px -4px 10px #8592ff;
     filter: drop-shadow(0px 3px 10px #6e7cfa67);

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Button from '../utils/Button'
 import { MdOutlineNotificationsActive } from "react-icons/md";
@@ -5,10 +6,18 @@ import Image from 'next/image';
 import lft from '@/app/assets/images/lft.png'
 import cntr from '@/app/assets/images/cnt.png'
 import rgt from '@/app/assets/images/rgt.png'
+import { motion } from 'motion/react';
 export default function Newsletter() {
   return (
     <>
-        <div className="newsletter relative z-3 bg-gradient-to-r from-g1 to-g2 text-white p-5 md:p-10 rounded-lg shadow-lg">
+        <motion.div  initial={{ y: 60, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{
+                          duration: 0.5,
+                          ease: "easeOut",
+                          delay: 0.2,
+                        }}
+                        viewport={{ once: true, amount: 0.1 }} className="newsletter relative z-3 bg-gradient-to-r from-g1 to-g2 text-white p-5 md:p-10 rounded-lg shadow-lg">
             <Image className='absolute z-[-1] h-full w-auto left-0 top-0 block' src={lft} alt='shape' />
             <Image className='absolute z-[-1] h-full w-auto -translate-x-1/2 left-1/2 top-0 block' src={cntr} alt='shape' />
             <Image className='absolute z-[-1] h-full w-auto right-0 top-0 block' src={rgt} alt='shape' />
@@ -37,7 +46,7 @@ export default function Newsletter() {
                     </div>
                 </div>
             </div>      
-        </div>
+        </motion.div>
     </>
   )
 }
