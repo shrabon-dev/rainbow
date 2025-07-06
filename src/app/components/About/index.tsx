@@ -9,7 +9,7 @@ import tngle from "@/app/assets/images/tngle.png";
 import Button from "../utils/Button";
 import Title from "../utils/Title";
 import { TiArrowLeftOutline } from "react-icons/ti";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 export default function About() {
   const listVariant = {
@@ -23,7 +23,7 @@ export default function About() {
 
   const itemVariant = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeInOut } },
   };
   return (
     <>

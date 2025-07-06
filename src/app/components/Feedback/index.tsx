@@ -17,7 +17,7 @@ import grArrow from "@/app/assets/images/gr_arrow.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import type { Swiper as SwiperClass } from "swiper";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 export default function Feedback() {
   const [thumbs, setThumbs] = useState<SwiperClass | null>(null);
@@ -94,7 +94,7 @@ export default function Feedback() {
     show: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.5, ease: easeInOut },
     },
   };
   return (
