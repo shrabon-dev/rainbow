@@ -132,7 +132,7 @@ export default function Hero() {
                   <Image
                     src={crcl_txt}
                     alt="hero image"
-                    className="md:w-24 md:h-24 xl:w-44 xl:h-44 rotate-360 border-2 rounded-full border-clr-text border-dashed "
+                    className="md:w-24 md:h-24 xl:w-44 xl:h-44 rotate-360 "
                   />
                   <span className="icon bg-gradient-to-br from-g2 to-g1 p-3 rounded-full w-10 h-10 inline-flex items-center justify-center text-white absolute top-1/2 left-1/2 -translate-1/2 text-xl">
                     <IoMdPlay />
