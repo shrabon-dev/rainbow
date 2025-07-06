@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import logo from '@/app/assets/images/flogo.png'
 import "../globals.css"; 
 import 'swiper/css';
 
