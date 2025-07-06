@@ -21,7 +21,7 @@ import { easeInOut, motion } from "framer-motion";
 
 export default function Feedback() {
   const [thumbs, setThumbs] = useState<SwiperClass | null>(null);
-  const [centerSlide, setCenterSlide] = useState(null);
+const [centerSlide, setCenterSlide] = useState<number | null>(null);
   const clientFeedbacks = [
     {
       img: fdbcImg,
