@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/flogo.png",
   },
+  
 };
  
 export default function RootLayout({
