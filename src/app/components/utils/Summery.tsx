@@ -1,6 +1,5 @@
 "use client";
-import { motion } from "motion/react";
-import { useEffect } from "react";
+import { motion } from "motion/react"; 
 export default function Summery({
   title,
   percentage,
