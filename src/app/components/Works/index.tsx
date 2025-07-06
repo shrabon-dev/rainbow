@@ -9,7 +9,7 @@ import WorkItem from '../utils/WorkItem'
 import imgOne from '@/app/assets/images/36.png'
 import imgTwo from '@/app/assets/images/business-people.png' 
 import imgThree from '@/app/assets/images/image1368.png' 
-import { motion } from 'motion/react'
+import { motion } from "framer-motion";
 export default function Works() {
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 5; // how many items to show

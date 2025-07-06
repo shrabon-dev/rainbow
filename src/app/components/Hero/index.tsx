@@ -13,7 +13,7 @@ import box from "@/app/assets/images/box.png";
 import crcl_txt from "@/app/assets/images/v_crcl_txt.png";
 import { CiCirclePlus } from "react-icons/ci";
 import { IoMdPlay } from "react-icons/io";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (

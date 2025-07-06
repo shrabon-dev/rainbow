@@ -6,7 +6,7 @@ import Image from 'next/image';
 import lft from '@/app/assets/images/lft.png'
 import cntr from '@/app/assets/images/cnt.png'
 import rgt from '@/app/assets/images/rgt.png'
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
 export default function Newsletter() {
   return (
     <>

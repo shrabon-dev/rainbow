@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import un from "@/app/assets/images/un.png";
 import star from "@/app/assets/images/star.png";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 export default function Marquee() {
   return (
     <>

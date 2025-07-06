@@ -13,7 +13,7 @@ import {
 import event from "@/app/assets/images/event/evnt.png";
 import GradientColor from "../utils/GradientColor";
 import Newsletter from "../Newsletter";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 export default function Footer() {
   const listVariant = {
     hidden: {},

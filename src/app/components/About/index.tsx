@@ -9,7 +9,7 @@ import tngle from "@/app/assets/images/tngle.png";
 import Button from "../utils/Button";
 import Title from "../utils/Title";
 import { TiArrowLeftOutline } from "react-icons/ti";
-import { motion } from "motion/react"; 
+import { motion } from "framer-motion";
 
 export default function About() {
   const listVariant = {

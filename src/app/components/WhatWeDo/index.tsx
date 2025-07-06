@@ -10,7 +10,7 @@ import Image from "next/image";
 import { useState } from "react";
 import whiteArrow from "@/app/assets/images/white_arrow.png";
 import grArrow from "@/app/assets/images/gr_arrow.png";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 export default function WhatWeDo() {
   // activeSlide will now represent the ID of the centrally active slide.
   const [activeSlideId, setActiveSlideId] = useState(1); // Start with the first service as active
