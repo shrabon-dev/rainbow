@@ -69,11 +69,11 @@ export default function WhatWeDo() {
             {/* Button */} 
             {/* Slider Navigation Buttons */}
             <div className="text-center">
-            <div className=" inline-flex items-center pt-[850px] md:pt-[600px] justify-center mx-auto"> 
+            <div className=" inline-flex items-center pt-[850px] sm:pt-[950px] md:pt-[600px] justify-center mx-auto"> 
             <span className="w-40 inline-block">
                <Button text="View all services"/>
             </span>
-            <span className="slide_btn w-40 mx-auto z-[999] inline-flex items-center">
+            <span className="slide_btn w-40 mx-auto z-[999] relative md:-top-38  lg:-top-36  md:-right-68 lg:-right-90 inline-flex items-center">
               <button onClick={handlePrev} className="rotate-90  next cursor-pointer duration-300 ease-linear transition-all hover:from-g2 hover:to-g1 left-0  w-10 h-10 border-2 border-primary/20  inline-flex items-center justify-center bg-gradient-to-br hover:border-white from-g2/0 to-g1/0 rounded-full group">
                 <Image className='hidden -rotate-180 group-hover:block' src={whiteArrow} alt='prev btn arrow'/>
                 <Image className='inline-block  group-hover:hidden' src={grArrow} alt='prev btn arrow'/>

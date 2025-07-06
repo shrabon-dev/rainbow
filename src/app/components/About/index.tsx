@@ -22,7 +22,7 @@ export default function About() {
                 </div>
                 <div className="relative">
                   <div className="txt_circle absolute left-full md:left-2/3 -translate-x-1/2 top-10 md:top-0  -translate-y-1/2 w-40 h-40">
-                    <Image className='w-20 md:w-40 h-20 md:h-40 absolute block top-0 left-0 -translate-x-1/2 -translate-y-1/2' src={txt} alt='txt'/>
+                    <Image className='w-20 md:w-40 rotate-360 h-20 md:h-40 absolute block top-0 left-0 -translate-x-1/2 -translate-y-1/2' src={txt} alt='txt'/>
                     <Image className='w-5 h-5 absolute block top-0 left-0 -translate-x-1/2 -translate-y-1/2' src={tngle} alt='tngle'/>
                   </div>
                   <div className="img h-40 sm:h-62 md:h-68  border-4 border-white rounded-lg -mb-5 sm:-mb-15 -ml-5 sm:-ml-15 overflow-hidden">

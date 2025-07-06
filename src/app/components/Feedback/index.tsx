@@ -8,13 +8,18 @@ import fdbcImgTwo from "@/app/assets/images/steptodown 21.png";
 import fdbcImgThree from "@/app/assets/images/abtOne.png";
 import fdbcImgFour from "@/app/assets/images/fdb3.png";
 import fdbcImgFive from "@/app/assets/images/fdb4.png";
+import fdbcImgSix from "@/app/assets/images/imgFd.avif";
+import fdbcImgSeven from "@/app/assets/images/imgFD2.avif";
+import fdbcImgEight from "@/app/assets/images/imgFD3.avif";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import whiteArrow from "@/app/assets/images/white_arrow.png";
 import grArrow from "@/app/assets/images/gr_arrow.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
+import type { Swiper as SwiperClass } from 'swiper';
+
 export default function Feedback() {
-    const [thumbs, setThumbs] = useState(null);
+   const [thumbs, setThumbs] = useState<SwiperClass | null>(null);
     const [centerSlide, setCenterSlide] = useState(null);
   const clientFeedbacks = [
     {
@@ -53,21 +58,21 @@ export default function Feedback() {
       star:4,
     }, 
     {
-      img:fdbcImgFive,
+      img:fdbcImgSix,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:' UI / UX Designer',
       star:4,
     }, 
     {
-      img:fdbcImgFive,
+      img:fdbcImgSeven,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:' UI / UX Designer',
       star:4,
     }, 
     {
-      img:fdbcImgFive,
+      img:fdbcImgEight,
       desc:'“Simply dummy text of the printing and Expert Advisor. lorem Ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.”',
       name:'Bm Ashik',
       disg:' UI / UX Designer',
@@ -112,7 +117,7 @@ export default function Feedback() {
           <div className="client_img">
             <div className="  mb-5">
               <Swiper   
-                onSwiper={setThumbs} // ← this sets the thumbs swiper instance
+                onSwiper={setThumbs}  
                 slidesPerView={5}
                 spaceBetween={10}
                 centeredSlides={true}

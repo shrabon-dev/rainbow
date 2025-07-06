@@ -9,21 +9,22 @@ import hro from "@/app/assets/images/hro.png"
 import rckt from "@/app/assets/images/Rocket-small.png"
 import tr from "@/app/assets/images/tr.png"
 import box from "@/app/assets/images/box.png"
-import crcl_txt from "@/app/assets/images/crcl_btn.png"
+import crcl_txt from "@/app/assets/images/v_crcl_txt.png"
 import { CiCirclePlus } from "react-icons/ci";
+import { IoMdPlay } from 'react-icons/io';
 
 
 export default function Hero() {
   return (
     <>
       <section className="hero-section relative py-20 md:pb-10 2xl:pb-50 px-3 sm:px-0">
-        <Image className='absolute left-20 top-1/4' src={box} alt='shape'/>
+        <Image className='absolute left-20 bounce-60 top-1/4' src={box} alt='shape'/>
         <div className="container mx-auto ">
           <div className="">
             <div className="w-full">
                      <div className="small-md:flex items-center justify-between">
                           <div className="w-full small-md:w-1/2 2xl:w-2/3 ">
-                            <h1 className='font-bold text-2xl sm:text-4xl lg:text-6xl xl:text-[100px] leading-tight'><span className='relative'>We shape  the future <span className='absolute -right-5 -top-5'><Image src={tr} alt='shape'/></span>  </span><span className='relative block xl:inline-block'>of <span className='text-[60px] sm:text-6xl xl:text-[100px] relative inline-block'><GradientColor text='business' fontWeight='semibold'/>  <span className='absolute -right-20 2xl:top-5'><Image src={rckt} alt='shape'/></span></span>  </span></h1>
+                            <h1 className='font-bold text-2xl sm:text-4xl lg:text-6xl xl:text-[100px] leading-tight'><span className='relative'>We shape  the future <span className='bounce-r-30  absolute -right-5 -top-5'><Image src={tr} alt='shape'/></span>  </span><span className='relative block xl:inline-block'>of <span className='text-[60px] sm:text-6xl xl:text-[100px] relative inline-block'><GradientColor text='business' fontWeight='semibold'/>  <span className='bounce-30 absolute -right-20 2xl:top-5'><Image src={rckt} alt='shape'/></span></span>  </span></h1>
                             <p className='text-clr-text font-normal text-sm mt-4 lg:max-w-1/2 leading-7'>A business consultant is a professional who provides expert advice and guidance to businesses on various aspects such.</p>
                           </div>
                           {/* <div className="w-1/2 flex justify-end">
@@ -66,10 +67,11 @@ export default function Hero() {
             </div>
             <div className="hidden md:block w-full">
                 <div className="hr_img md:absolute -bottom-20 right-0 -z-10 md:w-[60%] xl:w-[70%] 2xl:w-[1120px] h-fit">
-                  <div className="text_circle absolute -top-20 left-[55%] -translate-x-1/2 w-fit h-fit">
-                      <Image src={crcl_txt} alt='hero image' className='w-44 h-44' />
+                  <div className="text_circle absolute md:-top-12 xl:-top-20 left-[55%] -translate-x-1/2  w-fit h-fit">
+                      <Image src={crcl_txt} alt='hero image' className='md:w-24 md:h-24 xl:w-44 xl:h-44 rotate-360 border-2 border-clr-text border-dashed ' />
+                      <span className="icon bg-gradient-to-br from-g2 to-g1 p-3 rounded-full w-10 h-10 inline-flex items-center justify-center text-white absolute top-1/2 left-1/2 -translate-1/2 text-xl"><IoMdPlay/></span>
                   </div>
-                  <Image src={hro} alt='hero image' className='w-full h-auto' />
+                  <Image src={hro} alt='hero image' className='w-full h-auto'/>
                 </div>
             </div>
           </div>

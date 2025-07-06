@@ -11,7 +11,7 @@
   --color-btn:#4C5DEF;
   --color-primary:#5163FF;
   --color-dark:#0C0129;
-  --color-card:#FE71B908;
+  --color-card:#14052E;
   --color-icon:#ffffff10;
   --color-g1:#708BFD;
   --color-g2:#FE71B9;
@@ -197,6 +197,91 @@
     100%{
       opacity: 1;
       scale: 1;
+    }
+  }
+
+  .rotate-360{
+    animation: rotate-360 10s linear forwards infinite;
+  }
+
+  @keyframes rotate-360 {
+    0%{
+      rotate: 0deg;
+    }
+    100%{
+      rotate: 360deg;
+    }
+  }
+  .bounce-60{
+    animation: bounce-60 10s linear forwards infinite;
+  }
+
+  @keyframes bounce-60 {
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(60px) translateX(50px);
+    }
+    100%{
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+  .bounce-30{
+    animation: bounce-30 10s linear forwards infinite;
+  }
+
+  @keyframes bounce-30 {
+    0%{
+      transform: translateY(0px) scale(.5);
+    }
+    50%{
+      transform: translateY(30px) translateX(-30px) scale(1);
+    }
+    100%{
+      transform: translateY(0px) translateX(0px) scale(.5);
+    }
+  }
+  .bounce-r-30{
+    animation: bounce-r-30 10s linear forwards infinite;
+  }
+
+  @keyframes bounce-r-30 {
+    0%{
+      transform: translateX(0px);
+    }
+    50%{
+      transform: translateY(5px) translateX(-30px);
+    }
+    100%{
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+  .move-360{
+    animation: move-360 10s linear forwards infinite;
+  }
+
+  @keyframes move-360 {
+    0%{
+      top: 0;
+      right: 100%;
+      
+    }
+    25%{
+      top: 0;
+      right: 0;
+    }
+    50%{
+      top: 100%;
+      right: 0;
+    }
+    75%{
+      top: 100%;
+      right: 100%;
+    }
+    100%{
+     top: 0;
+      right: 100%;
     }
   }
 

@@ -30,16 +30,22 @@ export default function ServiceItem({
       extraClass = "z-50 top-[150px] scale-100 blur-0 opacity-100 pointer-events-auto";
       break;
     case -1: 
-      extraClass = "absolute left-1/2 -translate-x-1/2 top-[70px] scale-90 z-40 blur-[2px]  pointer-events-none";
+      extraClass = "absolute left-1/2 -translate-x-1/2 top-[80px] scale-90 z-40 blur-[2px]  pointer-events-none";
       break;
     case -2:  
-      extraClass = "absolute left-1/2 -translate-x-1/2 top-[0px] scale-80 z-30 blur-[2px]   pointer-events-none";
+      extraClass = "absolute left-1/2 -translate-x-1/2 top-[16px] scale-80 z-30 blur-[2px]   pointer-events-none";
+      break;
+    case -3: 
+      extraClass = "absolute left-1/2 -translate-x-1/2 top-[-60px] scale-60 z-[5] bg-blue-400 blur-[2px] pointer-events-none";
       break;
     case 1:  
-      extraClass = "absolute left-1/2 -translate-x-1/2 top-[60px] scale-90 z-20 blur-[2px]  pointer-events-none";
+      extraClass = "absolute left-1/2 -translate-x-1/2 top-[80px] scale-90 z-20 blur-[2px]  pointer-events-none";
       break;
     case 2: 
-      extraClass = "absolute left-1/2 -translate-x-1/2 top-[-40px] scale-65 z-10 blur-[2px] pointer-events-none";
+      extraClass = "absolute left-1/2 -translate-x-1/2 top-[16px] scale-80 z-10 blur-[2px] pointer-events-none";
+      break;
+    case 3: 
+      extraClass = "absolute left-1/2 -translate-x-1/2 top-[-60px] scale-60 z-[5] bg-blue-400 blur-[2px] pointer-events-none";
       break;
     default: 
       extraClass = "hidden"; 
@@ -51,7 +57,7 @@ export default function ServiceItem({
       onClick={onClick}
       className={`
         absolute left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out
-        w-[300px] sm:w-[560px] md:w-[760px] lg:w-[960px] mx-auto
+        w-[300px] sm:w-[450px] md:w-[760px] lg:w-[960px] mx-auto
         shadow-2xl rounded-xl bg-white p-10
         ${extraClass}
       `}

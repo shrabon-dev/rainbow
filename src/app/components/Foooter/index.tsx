@@ -11,16 +11,18 @@ export default function Footer() {
   return (
     <footer className='overflow-hidden relative'>
       <div className="avt absolute top-1/2 left-0 z-10 -translate-y-1/2 -translate-x-1/2">
-        <Image src={footer_avatar} alt="avatar" className='w-32 blur-sm'/>
+        <Image src={footer_avatar} alt="avatar" className='w-32 rotate-360 blur-sm'/>
       </div>
       <div className="avt absolute bottom-0 right-0 z-10  -translate-x-1/2">
-        <Image src={footer_avatar} alt="avatar" className='w-32 blur-sm'/>
+        <Image src={footer_avatar} alt="avatar" className='w-32 rotate-360 blur-sm'/>
       </div>
       <div className="bg-dark pt-5 md:pt-24 relative z-0">
       <div className="container mx-auto">
         <div className="md:flex flex-wrap justify-between items-start">
-          <div className="lg:w-1/3 p-5">     
-            <div className="compny bg-card p-10 rounded-lg shadow-lg">
+          <div className="lg:w-1/3 p-5">  
+          <div className="bg-black/10 p-1 rounded-lg relative overflow-hidden ">
+             <span className='bg-conic from-g1/0 via-g1/5 to-100% from-90% via-20% to-g2/20 block absolute w-[140%] h-[180%] rotate-360 top-[-30%] -right-1/4   z-0'></span>
+            <div className="compny relative z-50 bg-card p-10 rounded-lg shadow-lg">
               <div className="logo">
                 <Image src={flogo} alt='footer logo'/>
               </div>
@@ -36,9 +38,12 @@ export default function Footer() {
                 <span><Link className='text-clr-text bg-white/5 w-10 h-10 rounded-lg inline-flex justify-center items-center' href="/"> <FaInstagram/></Link></span>
               </div>
             </div>
+          </div>   
           </div>
           <div className="w-full lg:w-2/3 p-5">
-              <div className="fmenus bg-card p-10 rounded-lg shadow-lg">
+          <div className="bg-black/10 p-1 rounded-lg relative overflow-hidden">
+          <span className='bg-gradient-to-r from-g1/20 to-g2/20 block absolute w-[120%] h-[120%] top-0 right-0 rotate-360 z-0'></span>
+              <div className="fmenus bg-card p-10 rounded-lg shadow-lg relative z-50">
                   <div className="sm:flex flex-wrap justify-between items-start">
                     <div className="mb-6 md:mb-0 sm:w-1/2 md:w-1/3 lg:w-1/3">
                       <h4 className='font-semibold text-lg md:text-2xl text-white'>Quick Links</h4>
@@ -90,6 +95,7 @@ export default function Footer() {
                     </div> 
                   </div>
               </div>
+          </div>
           </div>
           <div className="w-full p-5 md:p-0">
            <Newsletter/>

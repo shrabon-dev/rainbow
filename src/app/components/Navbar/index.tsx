@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="w-1/2 sm:w-1/3 flex items-center gap-2">
                     <div className="info text-clr-text flex items-center gap-1">
                         <button onClick={handleMobileMenus} className="icon md:text-xs xl:text-lg px-2 cursor-pointer"><SlMenu/></button>
-                        <button className="icon md:text-xs xl:text-lg px-2 border-l-2 border-clr-brdr/16 cursor-pointer"><MdOutlineLocalGroceryStore/></button>
+                        <button className="icon md:text-xs xl:text-lg px-2 border-l-2 border-clr-brdr/16 cursor-pointer relative"><MdOutlineLocalGroceryStore/> <span className='absolute -top-1 -right-1 w-4 h-4 items-center justify-center bg-g4 text-white text-[8px] inline-flex rounded-full'>20</span></button>
                         <button className="icon md:text-xs xl:text-lg px-2 border-l-2 border-clr-brdr/16 cursor-pointer"><BiSearchAlt/></button>
                     </div>
                  
