@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Rainbow Theme for Next.js",
   icons: {
     icon: "/flogo.png",
+    shortcut: "/flogo.png",
+    apple: "/flogo.png",
   },
   
 };

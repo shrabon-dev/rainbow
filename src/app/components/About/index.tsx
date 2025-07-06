@@ -27,7 +27,7 @@ export default function About() {
   };
   return (
     <>
-      <section className="about_sect py-16 px-3 sm:px-0">
+      <section className="about_sect py-8 md:py-16 px-3 sm:px-0">
         <div className="container mx-auto">
           <div className="md:flex">
             <div className="md:w-1/2 pr-10 pl-10 md:pl-0 lg:pr-20 xl:pr-0">

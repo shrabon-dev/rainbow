@@ -27,7 +27,7 @@
     @apply scale-70 w-[200px] h-[200px]  relative -right-[0%] 2xl:-right-[5%] rotate-15 md:w-[280px] md:h-[280px] xl:w-[350px] 2xl:w-[500px] xl:h-[350px] 2xl:h-[500px] 
   }
   .second_active {
-    @apply  w-[200px] h-[200px] md:w-[350px] xl:w-[450px] 2xl:w-[600px] md:h-[350px] xl:h-[450px] 2xl:h-[600px] z-30 left-10 md:pl-0
+    @apply  w-[200px] h-[200px] md:w-[350px] xl:w-[450px] 2xl:w-[600px] md:h-[350px] xl:h-[450px] 2xl:h-[600px] z-30 !left-32 sm:left-10 md:pl-0
   }
   .third_active{
     @apply w-[200px] h-[200px]  md:w-[280px] xl:w-[380px] 2xl:w-[480px] md:h-[280px] xl:h-[380px] 2xl:h-[480px] -ml-5 z-20

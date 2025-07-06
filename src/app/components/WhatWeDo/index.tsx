@@ -81,7 +81,7 @@ export default function WhatWeDo() {
     <>
       <section className="services pb-40 md:pb-0 relative" id="service_sect">
         <Image src={bg} alt="bg shape" className="absolute left-0 top-0" />
-        <div className="container mx-auto py-20">
+        <div className="container mx-auto py-10 sm:py-20">
           <div className="title text-center">
             <motion.div
               initial={{ y: 60, opacity: 0 }}
@@ -133,7 +133,7 @@ export default function WhatWeDo() {
               viewport={{ once: true, amount: 0.4 }}
               className="text-center"
             >
-              <div className=" inline-flex items-center pt-[850px] sm:pt-[950px] md:pt-[600px] justify-center mx-auto">
+              <div className=" inline-flex items-center pt-[890px] sm:pt-[950px] md:pt-[600px] justify-center mx-auto">
                 <span className="w-40 inline-block">
                   <Button text="View all services" />
                 </span>
