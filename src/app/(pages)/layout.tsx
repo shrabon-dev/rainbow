@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import logo from '@/app/assets/images/flogo.png'
 import "../globals.css"; 
 import 'swiper/css';
 
 export const metadata: Metadata = {
   title: "Rainbow Theme",
   description: "Rainbow Theme for Next.js",
+  icons: {
+    icon: "/flogo.png",
+  },
 };
  
 export default function RootLayout({
@@ -16,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
           <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"></link>
+          
       </head>
       <body
          className='font-inter font-normal'
